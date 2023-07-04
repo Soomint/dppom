@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    
+ <!-- 해당 Mapper파일은 namespace에 지정한 인터페이스를 기반 (일반 클래스여도 된다) 으로 제작된다. -->
+ <mapper namespace="dppom.model.session.ISession">
+ 	<!-- 회원인증을 위한 쿼리를 실행할때 사용할 메소드명(id),  반환타입(resultType) -->
+ 	<select id="LoginProcess" resultType="dppom.model.session.SessionDTO">
+ 		select * from member where id=#{param1} and pass= #{param2}
+ 	</select>
+ </mapper>
